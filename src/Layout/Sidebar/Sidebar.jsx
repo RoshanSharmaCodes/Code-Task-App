@@ -31,7 +31,7 @@ const Sidebar = () => {
   };
 
   return (
-    <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed} width={250}>
+    <Sider collapsed={collapsed} onCollapse={setCollapsed} width={250}>
       <div style={{ padding: '16px' }}>
         <Search
           placeholder="Search menu"

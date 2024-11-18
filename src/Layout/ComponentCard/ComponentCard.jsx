@@ -1,15 +1,12 @@
 import "./ComponentCard.scss"
-import { Route, Routes } from 'react-router-dom'
-import Stopwatch from '../../Component/Stopwatch/Stopwatch'
-import Multiselect from '../../Component/Multiselect/Multiselect'
+import OutputSection from "./OutputSection/OutputSection"
+import CodeSection from "./CodeSection/CodeSection"
 
 export default function ComponentCard() {
   return (
     <div className='component-cont'>
-      <Routes>
-        <Route path='/stopwatch' element={<Stopwatch/>}/>
-        <Route path="/multiselect" element={<Multiselect/>} />
-      </Routes>
+      <CodeSection codeText=""/>
+      <OutputSection/>
     </div>
   )
 }
