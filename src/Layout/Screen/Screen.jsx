@@ -12,7 +12,7 @@ export default function Screen() {
         <Navbar/>
         <Layout>
           <Sidebar />
-          {/* <Dashboard /> */}
+          <Dashboard />
         </Layout>
       </Layout>
     </div>

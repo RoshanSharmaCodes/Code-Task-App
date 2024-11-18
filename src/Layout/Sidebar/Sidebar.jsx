@@ -13,8 +13,8 @@ const { Sider } = Layout;
 const { Search } = Input;
 
 const menuItems = [
-  { key: '1', label: 'Home', icon: <HomeOutlined />, path: '/' },
-  { key: '2', label: 'Profile', icon: <UserOutlined />, path: '/profile' },
+  { key: '1', label: 'Stopwatch', icon: <HomeOutlined />, path: '/stopwatch' },
+  { key: '2', label: 'MultiSelect', icon: <UserOutlined />, path: '/multiselect' },
   { key: '3', label: 'Settings', icon: <SettingOutlined />, path: '/settings' },
   { key: '4', label: 'About', icon: <InfoCircleOutlined />, path: '/about' },
 ];
@@ -43,8 +43,8 @@ const Sidebar = () => {
       </div>
       <Menu theme="dark" mode="inline">
         {filteredItems.map((item) => (
-          <Menu.Item key={item.key} icon={item.icon}>
-            <Link to={item.path}>{item.label}</Link>
+          <Menu.Item key={item.key}>
+            <Link to={item.path}>{item.key}. {item.label}</Link>
           </Menu.Item>
         ))}
       </Menu>
