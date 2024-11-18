@@ -7,7 +7,7 @@ import {
   InfoCircleOutlined,
 } from '@ant-design/icons';
 import "./Sidebar.scss"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SidebarData from "../../Content/Content"
 
 const { Sider } = Layout;
@@ -25,8 +25,9 @@ const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const handleSearch = (value) => {
-    const filtered = menuItems.filter((item) =>
-      item.name.toLowerCase().includes(value.toLowerCase())
+    console.log("Value",value)
+    const filtered = SidebarData.filter((item) =>
+      item.name.toLowerCase().startsWith(value.toLowerCase())
     );
     setFilteredItems(filtered);
   };
