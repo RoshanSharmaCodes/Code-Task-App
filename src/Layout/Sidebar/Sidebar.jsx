@@ -8,6 +8,7 @@ import {
 } from '@ant-design/icons';
 import "./Sidebar.scss"
 import { useState } from 'react';
+import SidebarData from "../../Content/Content"
 
 const { Sider } = Layout;
 const { Search } = Input;
@@ -20,12 +21,12 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const [filteredItems, setFilteredItems] = useState(menuItems);
+  const [filteredItems, setFilteredItems] = useState(SidebarData);
   const [collapsed, setCollapsed] = useState(false);
 
   const handleSearch = (value) => {
     const filtered = menuItems.filter((item) =>
-      item.label.toLowerCase().includes(value.toLowerCase())
+      item.name.toLowerCase().includes(value.toLowerCase())
     );
     setFilteredItems(filtered);
   };
@@ -43,8 +44,8 @@ const Sidebar = () => {
       </div>
       <Menu theme="dark" mode="inline">
         {filteredItems.map((item) => (
-          <Menu.Item key={item.key}>
-            <Link to={item.path}>{item.key}. {item.label}</Link>
+          <Menu.Item key={item.name}>
+            <Link to={item.route}>{item.id}. {item.name}</Link>
           </Menu.Item>
         ))}
       </Menu>

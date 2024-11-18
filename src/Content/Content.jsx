@@ -1,15 +1,13 @@
   import {
   GithubOutlined,
   LinkedinOutlined,
-  MailOutlined,
-  AuditOutlined,
   ExportOutlined,
   TwitterOutlined,
   ReadOutlined
 } from "@ant-design/icons";
 
   // Define the data array
-  const data = [
+  const SidebarData = [
     {
       id: 1,
       component: "",
@@ -41,7 +39,7 @@
   ];
   
   // Export the data array
-  export default data;
+  export default SidebarData;
   
   // Define the NavbarLink array
   export const NavbarLink = [
